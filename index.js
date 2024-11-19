@@ -1,8 +1,9 @@
-    let express = require('express')
-    let app = express()
-    const Pool = require('pg').Pool
-    const bodyParser = require('body-parser')
-    let cors = require('cors')
+import express from "express"
+let app = express()
+import pg from pg
+const {Pool} = pg
+import bodyParser from "body-parser"
+import cors from cors
 
     const corsOptions = {
         origin: '*',
@@ -100,3 +101,4 @@
 
 
     app.listen(3000)
+    export default app
