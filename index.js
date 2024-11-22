@@ -19,10 +19,13 @@ import cors from cors
 
     const pool = new Pool({
         user: 'cjohnson345',
-        host: 'localhost',
+        host: '@ep-holy-rice-a52gt46b-pooler.us-east-2.aws.neon.tech',
         database: 'gardenlocator',
-        password: 'password',
-        port: 5432
+        password: 'IJbB4NcO7tGw',
+        port: 5432,
+        ssl: {
+            require: true,
+        }
     })
 
     app.get('/recipes', function(req,res){
@@ -102,3 +105,7 @@ import cors from cors
 
     app.listen(3000)
     export default app
+
+
+
+ 
